@@ -1,4 +1,4 @@
-# Blue Sun Bird Crackers Shop Website
+# Blue Sun Bird Crackers Website
 
 Welcome to the repository for our Blue Sun Bird Crackers Shop Website project! This project is designed to create a website for a crackers shop using HTML, CSS, jQuery, JSON, and Web API.
 
