@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Logo and Title -->
+    <link rel="icon" type="image/png" href="assets/img/icons/tabicon.png" />
+    <title>Blue Sun Bird</title>
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!--  Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+    <!-- Jquery UI Json Response -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
+    <!-- Main Javascript -->
+    <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/manager.js"></script>
+    <!-- Local CSS  -->
+    <style>
+        body {
+            background: #FFF;
+        }
+
+        .customAccordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .customAccordion:hover {
+            background-color: #ccc;
+        }
+
+        .customAccordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding-right: 20px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+        }
+
+        .productImg {
+            height: 60px;
+            width: 90px;
+            margin: 10px;
+            border: 1px solid black;
+            float: left;
+            margin-left: 10%;
+        }
+
+        #saveBtn {
+            margin-top: 10px;
+            margin-right: 6%;
+            background-color: #E91E63;
+            border: #E91E63;
+        }
+
+        #resetBtn {
+            margin-bottom: 10px;
+            margin-right: 6%;
+            background-color: #E91E63;
+            border: #E91E63;
+        }
+
+        thead {
+            text-align: center;
+        }
+
+        .productName {
+            font-size: 13px;
+        }
+
+        .productPrice {
+            width: 90px;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 13px;
+        }
+
+        thead {
+            border-bottom: 1px solid black;
+        }
+
+        .btnEdit,
+        .btnEditItem {
+            margin-left: 8px;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .btnDelete {
+            font-size: 12px;
+        }
+
+        .btnDeleteItem {
+            font-size: 12px;
+        }
+
+
+        span {
+            margin-left: 0.3rem;
+            font-family: sans-serif;
+            font-size: 13px;
+        }
+
+        .btnAdd,
+        .btnAddItem {
+            font-size: 12px;
+        }
+
+        #detailsSubmit {
+            color: #FFF;
+            background-color: #E91E63;
+            border: #E91E63;
+            margin-left: 5px;
+        }
+
+        .changeText {
+            text-transform: none !important;
+        }
+
+        label {
+            background-color: #E91E63;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #FFF;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .customAccordion {
+                font-size: 12px;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+
+            .btnAdd,
+            .btnEdit,
+            .btnDelete {
+                width: 55px;
+                float: right;
+            }
+
+            .btnEdit {
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+
+            .btnAddItem,
+            .btnEditItem,
+            .btnDeleteItem {
+                width: 55px;
+            }
+
+            .productName {
+                width: 120px;
+            }
+
+            .productPrice {
+                width: 110%;
+                margin-left: 3px;
+            }
+
+            .productImg {
+                width: 50px;
+            }
+
+            .ctgName {
+                width: 110%;
+            }
+
+            thead {
+                font-size: 12px;
+                margin-left: 0px;
+            }
+
+            .panel span {
+                display: none !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Product Section Start -->
+    <section id="allProducts" class="schedule section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title-header text-center">
+                        <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Product Details</h1>
+                        <p class="wow fadeInDown" data-wow-delay="0.2s">Add, Update or Delete products here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end"><button type="button" class="btn btn-success"
+                    id="resetBtn"><i class="fa-solid fa-rotate-right"></i> Reset</button></div>
+            <!-- Dynamic Accordion -->
+            <div id="accordionContainer" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+            <!-- End of Dynamic Accordion -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end"><button type="button" class="btn btn-success"
+                    id="saveBtn"><i class="fa-solid fa-floppy-disk"></i> Save</button></div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+    <!-- Other Details Section Start -->
+    <section id="allProducts" class="schedule section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title-header text-center">
+                        <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Other Details</h1>
+                        <p class="wow fadeInDown" data-wow-delay="0.2s">Update Other details here</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <form id="detailsForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputEmail">Email Address</label>
+                                <input type="email" class="form-control changeText" id="inputEmail">
+                            </div><br>
+                            <div class="form-group col-md-4">
+                                <label for="inputPhone">Phone Number</label>
+                                <input type="tel" class="form-control changeText" id="inputPhone">
+                            </div><br>
+                            <div class="form-group col-md-4">
+                                <label for="inputPhone2">Secondary Number</label>
+                                <input type="tel" class="form-control changeText" id="inputPhone2">
+                            </div><br>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputAddress">Shop Address</label>
+                            <textarea type="text" class="form-control changeText" id="inputAddress" rows="4"></textarea>
+                        </div><br>
+                        <div class="form-group col-md-4">
+                            <label for="diwaliDate">Diwali Date</label>
+                            <input type="date" class="form-control" id="diwaliDate" name="diwali">
+                        </div><br>
+                        <div class="d-grid gap-2 d-md-flex">
+                            <button type="button" class="btn btn-success" name="submitBtn" id="detailsSubmit"><i
+                                    class="fa-solid fa-pen-to-square"></i> Update
+                                Details</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Other Details Section End -->
+</body>
+
+</html>

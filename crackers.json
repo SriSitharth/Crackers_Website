@@ -1,0 +1,149 @@
+{
+  "emailId": "selvarajsrinarayana@gmail.com",
+  "phoneNumber": "8056783050",
+  "secondaryNumber": "9500354050",
+  "shopAddress": "Pernaickenpatti, Sivakasi, TamilNadu, Pincode : 626189",
+  "diwaliDate": "2023/11/09",
+  "crackers": [
+    {
+      "category": "Sparkles",
+      "categoryTotal": 0,
+      "items": [
+        {
+          "id": 1,
+          "name": "12 CM Electric Sparkles",
+          "img": "Images/p103.jpeg",
+          "img2": "Images/p104.jpeg",
+          "img3": "Images/p102.jpeg",
+          "price": 204,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": false
+        },
+        {
+          "id": 2,
+          "name": "30 CM Electric Sparkles",
+          "img": "Images/p109.jpeg",
+          "img2": "Images/p111.jpeg",
+          "img3": "Images/p110.jpeg",
+          "price": 600,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": false
+        }
+      ]
+    },
+    {
+      "category": "Flower Pots",
+      "categoryTotal": 0,
+      "items": [
+        {
+          "id": 3,
+          "name": "Color Koti",
+          "img": "Images/p9.jpg",
+          "img2": "Images/p13.jpeg",
+          "img3": "Images/p14.jpeg",
+          "price": 400,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": false
+        },
+        {
+          "id": 4,
+          "name": "Big Flower Pots",
+          "img": "Images/p2.jpg",
+          "img2": "Images/p112.jpeg",
+          "img3": "Images/p113.jpeg",
+          "price": 300,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": false
+        }
+      ]
+    },
+    {
+      "category": "Ground Chakkaras",
+      "categoryTotal": 0,
+      "items": [
+        {
+          "id": 5,
+          "name": "Small Chakkaras",
+          "img": "Images/p8.jpg",
+          "img2": "Images/p118.jpeg",
+          "img3": "Images/p119.jpeg",
+          "price": 800,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": false
+        },
+        {
+          "id": 6,
+          "name": "Deluxe Chakkaras",
+          "img": "Images/p115.jpeg",
+          "img2": "Images/p117.jpeg",
+          "img3": "Images/p120.jpeg",
+          "price": 900,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": false
+        }
+      ]
+    },
+    {
+      "category": "One Sound Crackers",
+      "categoryTotal": 0,
+      "items": [
+        {
+          "id": 7,
+          "name": "Lakshmi",
+          "img": "Images/p133.jpeg",
+          "img2": "Images/p12.jpeg",
+          "img3": "Images/p131.jpeg",
+          "price": 400,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": false
+        },
+        {
+          "id": 8,
+          "name": "4inch Lakshmi",
+          "img": "Images/p16.jpeg",
+          "img2": "Images/p131.jpeg",
+          "img3": "Images/p135.jpeg",
+          "price": 300,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": true
+        }
+      ]
+    },
+    {
+      "category": "Sky Rockets",
+      "categoryTotal": 0,
+      "items": [
+        {
+          "id": 9,
+          "name": "Bomb Rocket",
+          "img": "Images/p124.jpeg",
+          "img2": "Images/p129.jpeg",
+          "img3": "Images/p127.jpeg",
+          "price": 450,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": true
+        },
+        {
+          "id": 10,
+          "name": "Big Rocket",
+          "img": "Images/p125.jpeg",
+          "img2": "Images/p128.jpeg",
+          "img3": "Images/p126.jpeg",
+          "price": 350,
+          "quantity": 0,
+          "total": 0,
+          "isChecked": true
+        }
+      ]
+    }
+  ]
+}
